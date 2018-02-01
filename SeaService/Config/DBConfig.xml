@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DBConfig>
+  <rows>
+    <TranCode>11028</TranCode>
+    <TranCodeRes>12028</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <!--1存储过程-->
+    <SPType>1</SPType>
+    <!--0返回list 1直接执行-->
+    <ReturnType>1</ReturnType>
+    <SPName>sp_jkk_bgdzs</SPName>
+    <!--请求参数名称,数据库参数名,数据库类型,数据库InOut.
+    数据库类型：V（varchar）I（Int） N（Decimal）D（Date）S（SysCursor）
+    数据库InOut：I（In） O（Out）
+    -->
+    <DBParaName>
+      PatientID,arg_blh#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <rows>
+    <TranCode>1003</TranCode>
+    <DBName>REMR</DBName>
+    <SPName>SP_BLOOD_GET_APPLYINFO</SPName>
+    <SPType>0</SPType>
+    <ReturnType>0</ReturnType>
+    <DBParaName>
+      DEPTCODE,ARGS_DEPTCODE#,CUR_RET,S,O
+    </DBParaName>
+  </rows>
+    <rows>
+    <TranCode>1005</TranCode>
+    <DBName>REMR</DBName>
+    <SPName>SP_BLOOD_SET_APPLYSTATUS</SPName>
+    <SPType>0</SPType>
+    <ReturnType>1</ReturnType>
+    <DBParaName>
+      CURENO,ARGS_CURENO#APPLAYSTATUS,ARGS_APPLAYSTATUS#OPERCODE,ARGS_OPERCODE#AFFIRMDATE,ARGS_AFFIRMDATE,D#,ARGS_ERRMSG,V,O
+    </DBParaName>
+  </rows>
+      <rows>
+    <TranCode>1004</TranCode>
+    <DBName>REMR</DBName>
+    <SPName>SP_BLOOD_GET_SREACTION</SPName>
+    <SPType>0</SPType>
+    <ReturnType>0</ReturnType>
+    <DBParaName>
+      DEPTCODE,ARGS_DEPTCODE#,CUR_RET,S,O
+    </DBParaName>
+  </rows>
+  
+    <rows>
+    <TranCode>1201</TranCode>
+    <DBName>RHIS</DBName>
+    <SPName>SP_BLD_GET_LIS</SPName>
+    <SPType>0</SPType>
+    <ReturnType>0</ReturnType>
+    <DBParaName>
+      REG_NO,args_regno#ItemCodes,args_itemcodes#,cv_1,S,O
+    </DBParaName>
+  </rows>
+
+  <rows>
+    <TranCode>1202</TranCode>
+    <DBName>RHIS</DBName>
+    <SPName>SP_BLD_LISDETAIL</SPName>
+    <SPType>0</SPType>
+    <ReturnType>0</ReturnType>
+    <DBParaName>
+      ItemListCodes,ARGS_YZH#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <!--1.6协定明细项目-->
+    <rows>
+    <TranCode>1100</TranCode>
+    <DBName>RHIS</DBName>
+    <SPName>SP_BLD_ORDER_REVIEW</SPName>
+    <SPType>0</SPType>
+    <ReturnType>1</ReturnType>
+    <DBParaName>
+      REGNO,ARGS_REGNO#DEPTCODE,ARGS_DEPTCODE#ORDERNO,ARGS_ORDERNO#DRCODE,ARGS_DRCODE#REGTYPE,ARGS_REGTYPE#,ARGS_RESULT,I,O
+    </DBParaName>
+  </rows>
+  
+   <!--1.1	HIS医嘱-->
+  <rows>
+    <TranCode>1101</TranCode>
+    <DBName>RHIS</DBName>
+    <SPName>SP_BLD_GET_MEDEICALORDERS</SPName>
+    <!--请求参数名称,数据库参数名,数据库类型,数据库InOut.
+    数据库类型：V（varchar）I（Int） N（Decimal）D（Date）S（SysCursor）
+    数据库InOut：I（In） O（Out）
+    -->
+    <SPType>0</SPType>
+    <ReturnType>0</ReturnType>
+    <DBParaName>
+      REGNO,ARGS_REGNO#DEPTCODE,ARGS_DEPTCODE#REGTYPE,ARGS_REGTYPE#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  
+  <!--协定明细项目-->
+       <rows>
+    <TranCode>1102</TranCode>
+    <DBName>RHIS</DBName>
+    <SPName>sp_bld_nego</SPName>
+    <SPType>0</SPType>
+    <ReturnType>0</ReturnType>
+    <DBParaName>
+      ITEMCODE,args_nego#,cv_1,S,O
+    </DBParaName>
+  </rows>
+
+  <rows>
+    <TranCode>1103</TranCode>
+    <DBName>RHIS</DBName>
+    <SPName>SP_BLD_SAVE_ORDERS</SPName>
+    <SPType>0</SPType>
+    <ReturnType>1</ReturnType>
+    <DBParaName>
+      REGNO,ARGS_REGNO#DEPTCODE,ARGS_DEPTCODE#ORDERNO,ARGS_ORDERNO#ITEMCODE,ARGS_ITEMCODE#DRCODE,ARGS_DRCODE#QTY,ARGS_QTY#,ARGS_RESULT,I,O
+    </DBParaName>
+  </rows>
+    
+    
+    
+  <rows>
+    <TranCode>11014</TranCode>
+    <TranCodeRes>21014</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_fymx</SPName>
+    <ReturnType>2</ReturnType>
+    <DBParaName>
+      AdmRowID,arg_jzbh#,cv_1,S,O
+    </DBParaName>
+  </rows>
+
+  <rows>
+    <TranCode>11015</TranCode>
+    <TranCodeRes>12015</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_jfjk</SPName>
+    <DBParaName>
+      TranFlowNo,arg_jylsh#CardTypeCode,arg_klx#CardNo,arg_kh#PatientID,arg_blh#AdmRowId,arg_jzbh#Amt,arg_yhjyje#InsurePayStr,arg_ybzfc#DeviceID,arg_jqh#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <rows>
+    <TranCode>11003</TranCode>
+    <TranCodeRes>22003</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_jk</SPName>
+    <DBParaName>
+      CardTypeCode,arg_klx#CardNo,arg_kh#PatientName,arg_brxm#Sex,arg_xb#Birthday,arg_csrq,D#IDCardNo,arg_sfzh#Tel,arg_sjhm#ActDate,arg_bksj,D#Amt,arg_yjjye,N#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <rows>
+    <TranCode>11024</TranCode>
+    <TranCodeRes>12024</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_jzjfxx</SPName>
+    <DBParaName>
+      AdmID,arg_cfh#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <rows>
+    <TranCode>11013</TranCode>
+    <TranCodeRes>12013</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_jzjl</SPName>
+    <DBParaName>
+      PatientID,arg_blh#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <rows>
+    <TranCode>11032</TranCode>
+    <TranCodeRes>12032</TranCodeRes>
+    <ReturnType>1</ReturnType>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_jzksryxx</SPName>
+    <DBParaName>
+      PatientID,arg_mzh#,cv_1,S,O
+    </DBParaName>
+  </rows>
+
+  <rows>
+    <TranCode>11023</TranCode>
+    <TranCodeRes>12023</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <ReturnType>2</ReturnType>
+    <SPName>sp_jkk_mzjzjl</SPName>
+    <DBParaName>
+      CardTypeCode,arg_klx#CardNo,arg_kh#StartDate,StartDate,D#EndDate,EndDate,D#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <rows>
+    <TranCode>11002</TranCode>
+    <TranCodeRes>12002</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_sfjy</SPName>
+    <DBParaName>
+      CardTypeCode,arg_klx#CardNo,arg_kh#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <!--4.12居民健康卡 提交挂号-->
+  <rows>
+
+    <TranCode>11012</TranCode>
+    <TranCodeRes>12012</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <ReturnType>1</ReturnType>
+    <SPName>sp_jkk_tjgh</SPName>
+    <DBParaName>
+      TranFlowNo,arg_jylsh#CardTypeCode,arg_klx#CardNo,arg_kh#PatientID,arg_blh#DepartmentCode,arg_ksid#DoctorCode,arg_ysid#Fee,arg_ghzfy#MRBookFee,arg_blbfy#BankCardNo,arg_yhkkh#InsurePayStr,arg_ybzfc#DeviceID,arg_jqh#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <!--5.3.	获取医保上传数据-->
+  <rows>
+    <TranCode>11031</TranCode>
+    <TranCodeRes>12031</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_ybscsj</SPName>
+    <DBParaName>
+      CardTypeCode,arg_klx#CardNo,arg_kh#PatientID,arg_blh#AdmRowID,arg_jzbh#ReadCardStr,arg_dkzfc#,ybsc_out,V,O
+    </DBParaName>
+  </rows>
+  <!--9.2.	预交金充值-->
+  <rows>
+    <TranCode>11041</TranCode>
+    <TranCodeRes>12041</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_yjjcz</SPName>
+    <DBParaName>
+      PatientID,arg_zyh#RechargeType,arg_type#DepositAmt,arg_yjjye#TradeTime,arg_jysj#PosID,arg_pos#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <!--9.1.	获取住院病人信息-->
+  <rows>
+    <TranCode>11040</TranCode>
+    <TranCodeRes>12040</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_zybrxx</SPName>
+    <DBParaName>
+      CardTypeCode,arg_klx#CardNo,arg_kh#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <!--9.4.	查询住院每日清单-->
+  <rows>
+    <TranCode>11026</TranCode>
+    <TranCodeRes>12026</TranCodeRes>
+    <DBName>RHIS</DBName>
+    <SPName>sp_jkk_zymrqd</SPName>
+    <DBParaName>
+      PatientID,arg_zyh#Date,arg_date#,cv_1,S,O
+    </DBParaName>
+  </rows>
+  <!--4.1.	查询可挂号的一级科室接口-->
+  <rows>
+    <TranCode>11007</TranCode>
+    <ReturnType>1</ReturnType>
+    <TranCodeRes>12007</TranCodeRes>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_GET_ALL_DEPT</SPName>
+    <DBParaName>
+      RegDate,ARGS_REGDATE#Type,ARGS_TYPE#RegType,ARGS_REGTYPE#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+  <!--4.4.	查询可挂号医生接口-->
+  <rows>
+    <TranCode>11009</TranCode>
+    <TranCodeRes>12009</TranCodeRes>
+    <ReturnType>1</ReturnType>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_GET_DOCTOR_LIST</SPName>
+    <DBParaName>
+      RegDate,ARGS_REGDATE#Type,ARGS_TYPE#RegType,ARGS_REGTYPE#DepartmentGroupCode,ARGS_DepartmentGroupCode#DepartmentCode,ARGS_DepartmentCode#SessionCode,ARGS_SESSIONCODE#DoctorInitial,ARGS_DoctorInitial#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+  <!--4.5.	查询可挂号医生排班的时间点列表(挂号挂在时间点使用)-->
+  <rows>
+    <TranCode>11032</TranCode>
+    <TranCodeRes>12013</TranCodeRes>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_GET_DOCTOR_TIMESPAN</SPName>
+    <DBParaName>
+      RegDate,ARGS_REGDATE#Type,ARGS_TYPE#RegType,ARGS_REGTYPE#ScheduleItemCode,ARGS_SCHEDULEITEMCODE#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+  <!--4.9.	获取预约挂号列表-->
+  <rows>
+    <TranCode>11016</TranCode>
+    <TranCodeRes>12016</TranCodeRes>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_GET_REGLIST</SPName>
+    <DBParaName>
+      CardTypeCode,ARGS_CARDTYPECODE#CardNo,ARGS_CARDNO#PatientID,ARGS_PATIENTID#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+  <!--4.13.	获取可预约日期接口-->
+  <rows>
+    <TranCode>11033</TranCode>
+    <TranCodeRes>12033</TranCodeRes>
+    <DBName>RAIM</DBName>
+    <ReturnType>1</ReturnType>
+    <SPName>SP_AIM_GET_SCHEDULE</SPName>
+    <DBParaName>
+      REGTYPE,ARGS_REGTYPE#DepartmentGroupCode,ARGS_DEPARTMENTGROUPCODE#DepartmentCode,ARGS_DEPARTMENTCODE#DoctorCode,ARGS_DOCTORCODE#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+
+  <!--4.3.	查询时段-->
+  <rows>
+    <TranCode>11030</TranCode>
+    <TranCodeRes>12030</TranCodeRes>
+    <ReturnType>1</ReturnType>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_GET_SESSION</SPName>
+    <DBParaName>
+      RegDate,ARGS_REGDATE#Type,ARGS_TYPE#RegType,ARGS_REGTYPE#DepartmentGroupCode,ARGS_DEPARTMENTGROUPCODE#DepartmentCode,ARGS_DEPARTMENTCODE#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+  <!--  4.6.  判断时间点是否可以挂号(挂号挂在时间点使用)-->
+  <rows>
+    <TranCode>11011</TranCode>
+    <TranCodeRes>12011</TranCodeRes>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_JUDGE_TIMESPAN</SPName>
+    <DBParaName>
+      RegDate,ARGS_REGDATE#Type,ARGS_TYPE#RegType,ARGS_REGTYPE#RowID,ARGS_ROWID#TimeValue,ARGS_TIMEVALUE#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+  <!--4.7.	锁号-->
+  <rows>
+    <TranCode>11027</TranCode>
+    <TranCodeRes>12027</TranCodeRes>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_LOCKED_REG</SPName>
+    <DBParaName>
+      RegDate,ARGS_REGDATE#Type,ARGS_TYPE#RegType,ARGS_REGTYPE#RowID,ARGS_ROWID#TimeValue,ARGS_TIMEVALUE#PatientID,ARGS_PATIENTID#TranFlowNo,ARGS_TRANFLOWNO#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+  <!--4.11.	取消预约-->
+  <rows>
+    <TranCode>11018</TranCode>
+    <TranCodeRes>12018</TranCodeRes>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_REG_CANCEL</SPName>
+    <DBParaName>
+      CardTypeCode,ARGS_CARDTYPECODE#CardNo,ARGS_CARDNO#PatientID,ARGS_PATIENTID#OrderID,ARGS_ORDER_ID#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+
+  <!--4.10.	预约取号-->
+  <rows>
+    <TranCode>11017</TranCode>
+    <TranCodeRes>12017</TranCodeRes>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_TAKE_REGNO</SPName>
+    <DBParaName>
+      OrderID,ARGS_ORDER_ID#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+  <!--4.8.	解除锁号-->
+  <rows>
+    <TranCode>11029</TranCode>
+    <TranCodeRes>12029</TranCodeRes>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_UNLOCKED_REG</SPName>
+    <DBParaName>
+      RegDate,ARGS_REGDATE#Type,ARGS_TYPE#RegType,ARGS_REGTYPE#RowID,ARGS_ROWID#TimeValue,ARGS_TIMEVALUE#PatientID,ARGS_PATIENTID#TranFlowNo,ARGS_TRANFLOWNO#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+
+  <!--4.4.	查询可挂号医生接口[11009]-->
+  <rows>
+    <TranCode>11009</TranCode>
+    <TranCodeRes>12009</TranCodeRes>
+    <ReturnType>1</ReturnType>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_GET_DOCTOR_LIST</SPName>
+    <DBParaName>
+      RegDate,ARGS_REGDATE#Type,ARGS_TYPE#RegType,ARGS_REGTYPE#DepartmentGroupCode,ARGS_DepartmentGroupCode#DepartmentCode,ARGS_DepartmentCode#SessionCode,ARGS_SESSIONCODE#DoctorInitial,ARGS_DoctorInitial#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+  <!--4.5.	查询可挂号医生排班的时间点列表(挂号挂在时间点使用)[ 11010]-->
+  <rows>
+    <TranCode>11010</TranCode>
+    <TranCodeRes>12010</TranCodeRes>
+    <ReturnType>1</ReturnType>
+    <DBName>RAIM</DBName>
+    <SPName>SP_AIM_GET_DOCTOR_TIMESPAN</SPName>
+    <DBParaName>
+      RegDate,ARGS_REGDATE#Type,ARGS_TYPE#RegType,ARGS_REGTYPE#ScheduleItemCode,ARGS_SCHEDULEITEMCODE#,ARGS_CV,S,O
+    </DBParaName>
+  </rows>
+
+
+</DBConfig>

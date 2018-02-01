@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LogConfig>
+  <!--<WarningMode>Email</WarningMode>
+  --><!--预警模式，可选项【OFF（不预警）/Email（电子邮件，需要Email组件配置文件）/SMS（短信，需要短信组件配置文件）】--><!--
+  <WarningEmail>admin@mrhuo.com</WarningEmail>
+  --><!--预警模式为Email时会将日志信息发送到这个电子邮件，需要配置文件Config\SMTPConfig.xml--><!--
+  <WarningSMSReciver>151********</WarningSMSReciver>
+  --><!--预警模式为SMS时会将日志信息发送到这个手机号码，需要配置文件Config\SMSConfig.xml--><!--
+  <SavePath>C:\\Logs\\</SavePath>
+  --><!--日志记录方式为File时，日志文件保存的位置--><!--
+  <DBConnectionString>SERVER=ip;USER=sa;PASSWORD=pass;</DBConnectionString>
+  --><!--日志记录方式为数据库时的数据库连接字符串。注意不要在连接字符串中添加数据库名称，数据库为自动创建。--><!--
+  <DBName>DB_Project_Logs</DBName>
+  --><!--日志数据库名称--><!--
+  <SplitTableByDays>5</SplitTableByDays>
+  --><!--日志分表储存相的依据隔天数--><!--
+  <CurrentTableName></CurrentTableName>
+  --><!--内置预留字段，禁止修改！-->
+
+  <LogType>FileLogger</LogType>
+  <!--日志记录方式【File（文件）/DataBase（数据库）】-->
+  <LogLevel>1</LogLevel> <!--0:Debug,1:Info,2:Warn,3:Error,4:None-->
+
+</LogConfig>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5c61523f-29bc-438a-aa53-3457508c8eb4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.chaya8.com:8001/UpLoadService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="6bdeea9c-24e4-4fc9-bf29-0efaabe736b3" SourceId="1" SourceUrl="http://www.chaya8.com:8001/UpLoadService.svc/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="34bdde38-7470-4635-b573-66f2c053702e" SourceId="1" SourceUrl="http://www.chaya8.com:8001/UpLoadService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="02c10bd2-5e1b-496f-88b0-6b00917a6ce9" SourceId="1" SourceUrl="http://www.chaya8.com:8001/UpLoadService.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6994441a-3faa-4d1d-ba39-f16eebe1dc48" SourceId="1" SourceUrl="http://www.chaya8.com:8001/UpLoadService.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="59edec2d-45f5-47c7-b1bb-d736c8f741e8" SourceId="1" SourceUrl="http://www.chaya8.com:8001/UpLoadService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
